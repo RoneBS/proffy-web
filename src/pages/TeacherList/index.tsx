@@ -1,34 +1,19 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
 
-import logoImg from '../../assets/images/logo.svg';
-import backIcon from '../../assets/images/icons/back.svg';
-
-import whatsappIcon from '../../assets/images/icons/whatsapp.svg';
-
-import './styles.css';
 import PageHeader from '../../components/PageHeader';
 import TeacherItem from '../../components/TeacherItem';
+import Input from '../../components/Input';
+
+import './styles.css';
 
 function TeacherList() {
     return (
         <div id="page-teacher-list" className="container">
            <PageHeader title="Estes são os proffys disponiveis.">
                <form id="search-teachers" >
-                   <div className="input-block">
-                       <label htmlFor="subjetc">Materia</label>
-                       <input type="text" id="subjetc" />
-                   </div>
-
-                   <div className="input-block">
-                       <label htmlFor="week-day">Dia da Semana</label>
-                       <input type="text" id="subjetc" />
-                   </div>
-
-                   <div className="input-block">
-                       <label htmlFor="time">Hora</label>
-                       <input type="text" id="subjetc" />
-                   </div>
+                  <Input name="subject" label="Matéria" />
+                  <Input name="week_day" label="Dia da Semana" />
+                  <Input type="time" name="time" label="Hora" />
                 </form> 
            </PageHeader>
 
